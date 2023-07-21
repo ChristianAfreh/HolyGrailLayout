@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-body{
+body {
     font-family: 'Poppins','Courier New', Courier, monospace;
     font-size: 16px;
 }
+
 
 h1,h2,h3 {
     color:#000;
@@ -23,7 +24,6 @@ nav li{
 .grid-container{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    min-height: 100vh;
 }
 
 header{
@@ -36,6 +36,11 @@ header{
 nav{
     border-right: 1px solid rgb(210, 217, 223);
     padding: 0 30px 30px 30px;
+}
+
+nav p{
+    font-weight: bolder;
+    font-size: 1.2rem;
 }
 
 article{
@@ -53,7 +58,6 @@ article img{
 
 aside{
     border-left:1px solid rgb(210, 217, 223);
-
 }
 
 
@@ -62,4 +66,41 @@ footer{
     border-top: 1px solid rgb(210, 217, 223);
     text-align: center;
     padding-top: 30px;
+}
+
+
+/* responsive */
+@media screen and (max-width: 990px) {
+    body{
+        font-size: 12px;
+        max-width: 300px;
+    }
+    nav{
+        grid-column: span 3;
+        text-align: center;
+        border-right: 0;
+        border-bottom: 1px solid rgb(210, 217, 223);
+    }
+
+    nav li{
+        display: inline;
+        padding: 0 10px;
+    }
+
+    article{
+        grid-column: span 3;
+        text-align: center;
+        border-bottom: 1px solid rgb(210, 217, 223);
+    }
+
+    aside{
+        grid-column: span 3;
+        border-left:0;
+        text-align: center;
+        padding: 0 10px; 
+    }
+
+    aside li{
+        padding: 0.1rem 0;
+    }
 }
